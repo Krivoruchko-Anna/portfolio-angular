@@ -1,0 +1,9 @@
+<div id="experience" class="experience">
+    <h2 class="experience__title">Experience</h2>
+    <div class="experience__container">
+        <app-experience-item
+                *ngFor="let item of experienceItems"
+                [item]="item">
+        </app-experience-item>
+    </div>
+</div>

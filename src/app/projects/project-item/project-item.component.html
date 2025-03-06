@@ -1,0 +1,8 @@
+<a [href]="project.link" target="_blank" class="project-item">
+    <img [src]="'/projects/' + project.image + '.jpg'" class="project-item__image" [alt]="project.title" />
+
+    <div class="project-item__info">
+        <div class="project-item__title">{{ project.title }}</div>
+        <div class="project-item__description">{{ project.description }}</div>
+    </div>
+</a>

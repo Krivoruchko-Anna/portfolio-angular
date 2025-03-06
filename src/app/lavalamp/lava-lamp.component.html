@@ -1,0 +1,25 @@
+<div class="lava-lamp">
+    <div
+            *ngFor="let circle of circles"
+            class="circle"
+            [ngStyle]="{
+      left: circle.left,
+      width: circle.size + 'px',
+      height: circle.size + 'px',
+      animationDelay: circle.delay,
+      background: 'radial-gradient(circle at top left, ' + circle.gradient + ')'
+    }"
+    ></div>
+
+    <div
+            *ngFor="let circle of middleCircles"
+            class="circle-m"
+            [ngStyle]="{
+      left: circle.left,
+      width: circle.size + 'px',
+      height: circle.size + 'px',
+      animationDelay: circle.delay,
+      background: 'radial-gradient(circle at top right, ' + circle.gradient + ')'
+    }"
+    ></div>
+</div>

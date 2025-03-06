@@ -1,0 +1,33 @@
+<div class="header">
+    <app-lines />
+    <div class="header__container">
+        <div class="header__info">
+            <h1 class="header__name">Anna Krivoruchko</h1>
+            <h2 class="header__title">Front End Developer</h2>
+            <p class="header__description">
+                I build responsive, pixel-perfect web applications that deliver seamless digital experiences.
+            </p>
+        </div>
+
+        <nav class="header__navigation">
+            <ul class="header__nav-list">
+                <li
+                        *ngFor="let link of navLinks"
+                        class="header__nav-item"
+                        [class.active]="activeSection === link.id"
+                        (click)="updateActiveSection(link.id)"
+                >
+                    <a (click)="disableListener()" [href]="link.to">{{ link.title }}</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="header__links">
+            <li *ngFor="let link of socials" class="header__link">
+                <a [href]="link.link" target="_blank" class="header__icon">
+                    <ng-container *ngComponentOutlet="link.icon"></ng-container>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

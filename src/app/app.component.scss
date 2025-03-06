@@ -1,0 +1,21 @@
+:host {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 40px 100px 40px;
+    display: flex;
+    box-sizing: content-box;
+    gap: 40px;
+    font-weight: normal;
+
+    @media (max-width: 1480px) {
+        padding: 3rem;
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,26 @@
+<a *ngIf="item.link; else noLink" [href]="item.link" target="_blank" class="experience-item">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+</a>
+
+<ng-template #noLink>
+    <div class="experience-item">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+</ng-template>
+
+<ng-template #content>
+    <div class="experience-item__date">
+        {{ item.date }}
+    </div>
+    <div class="experience-item__main">
+        <div class="experience-item__role">{{ item.title }}</div>
+        <div class="experience-item__description">{{ item.description }}</div>
+        <div class="experience-item__stack">
+            <div
+                    class="experience-item__stack-item"
+                    *ngFor="let tech of item.stack">
+                {{ tech }}
+            </div>
+        </div>
+    </div>
+</ng-template>

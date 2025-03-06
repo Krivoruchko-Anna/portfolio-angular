@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'assets/styles/base' as *;
+@use 'assets/styles/mixins' as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    display: flex;
+    place-items: center;
+    background-color: var(--main-brown);
+    color: var(--biege);
+}
+
+a {
+    text-decoration: none;
+    color: var(--biege);
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+main {
+    width: 56%;
+    z-index: 1;
+}
+
+header {
+    width: 44%;
+}

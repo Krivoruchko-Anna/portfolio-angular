@@ -1,0 +1,21 @@
+<div id="projects" class="projects">
+    <h2 class="projects__title">Projects</h2>
+    <div class="projects__container">
+        <app-project-item
+                *ngFor="let project of projects"
+                [project]="project"
+                class="projects__project"
+        ></app-project-item>
+    </div>
+</div>
+
+<div class="projects pet-projects">
+    <h2 class="projects__title show">Just for fun</h2>
+    <div class="projects__container">
+        <app-project-item
+                *ngFor="let project of petProjects"
+                [project]="project"
+                class="projects__project"
+        ></app-project-item>
+    </div>
+</div>

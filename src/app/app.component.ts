@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AppHeaderComponent } from './header/header.component';
+import { MainComponent } from './main/main.component';
+import { BacklightComponent } from "./backlight/backlight.component";
+import { LavaLampComponent } from "./lavalamp/lava-lamp.component";
+import { IconUpComponent } from "./icons/up/icon-up.component";
+import { CopyrightComponent } from "./copyright/copyright.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [AppHeaderComponent, MainComponent, BacklightComponent, LavaLampComponent, IconUpComponent, CopyrightComponent],
 })
-export class AppComponent {
-  title = 'portfolio-angular';
-}
+export class AppComponent {}
